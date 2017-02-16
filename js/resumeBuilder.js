@@ -2,8 +2,6 @@
 This is empty on purpose! Your code to build the resume will go here.
  */
 
-var skills = ["java", "c++", "c#", "sql", "javascript", "opengl"];
-
 var bio = {
 	"name" : "Felix Olsson",
 	"role" : "Software developer",
@@ -16,12 +14,56 @@ var bio = {
 	},
 	"bioPic" : "images/fry.jpg",
 	"welcome message" : "Välkommen till min sida",
-	"skills" : skills 
+	"skills" : ["java", "c++", "c#", "sql", "javascript", "opengl"] 
 };
 
 
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+var education = {
+	"schools" : [
+	{
+		"name" : "Berga",
+		"location" : "Malmö",
+		"major" : ["grundskola"],
+		"dates" : 2005,
+		"url" : " "
+	},
+	{
+		"name" : "Heleneholm",
+		"location" : "Malmö",
+		"degree" : ["Samhäll"],
+		"dates" : 2008,
+		"url" : " "
+	}]
+,
+	"onlineCourses" : [
+	{
+		"title" : "JavaScript Syntax",
+		"School" : "Udacity",
+		"dates" : 2017,
+		"url" : " "
+	}
+  ]
+};
 
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
+var work = {
+	"jobs" : [
+	{
+		"employer" : "tidningsbärarna",
+		"title" : "tidningsbud",
+		"dates" : "2009-01-03 2010-01-03",
+		"description" : "delade ut tidningar"
+	}]
+};
+
+var projects = {
+	"projects" : [
+	{
+		"title" : "android app",
+		"dates" : 2016,
+		"description" : "small game",
+		"images" : ["url"]
+	}]
+
+};
+
+
