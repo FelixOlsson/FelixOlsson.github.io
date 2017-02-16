@@ -66,4 +66,16 @@ var projects = {
 
 };
 
+if(bio.skills.length > 0) {
+	$("#header").append(HTMLskillsStart);
+	$('#header').append("<h1>test title</h1>");
+	
+	for(skill in bio.skills) {
+		$("#skills").append(HTMLskills.replace("%data%",bio.skills[skill]));
+	} 
+}
+
+
+
+
 
