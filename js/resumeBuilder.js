@@ -50,6 +50,7 @@ var work = {
 	{
 		"employer" : "tidningsbärarna",
 		"title" : "tidningsbud",
+		"location" : "Lund",
 		"dates" : "2009-01-03 2010-01-03",
 		"description" : "delade ut tidningar"
 	}]
@@ -123,6 +124,27 @@ function displayWork(work) {
 }
 }
 
+$(document).click(function(loc) {
+ var x = loc.pageX;
+ var y = loc.pageY;
+
+ logClicks(x, y);
+});
+
+function locationizer(work_obj) {
+	var locationArray = [];
+
+	work_obj.jobs.forEach(function(job) {
+		var newLocation = job.location;
+		locationArray.push(newLocation);
+	} );
+
+	return locationArray;
+}
+
+console.log(locationizer(work));
+
+$("#main").append(internationalizeButton);
 
 
 
