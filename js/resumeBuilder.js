@@ -62,7 +62,7 @@ var projects = {
 		"title" : "android app",
 		"dates" : 2017,
 		"description" : "small game",
-		"images" : ["images/fry.jpg"],
+		"images" : [],
 		"video" : "videos/gameplayMobileGame.mp4",
 		"repo" : "url"
 	}]
