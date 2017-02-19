@@ -60,9 +60,11 @@ var projects = {
 	"projects" : [
 	{
 		"title" : "android app",
-		"dates" : 2016,
+		"dates" : 2017,
 		"description" : "small game",
-		"images" : ["url"]
+		"images" : ["images/fry.jpg"],
+		"video" : "videos/gameplayMobileGame.mp4",
+		"repo" : "url"
 	}]
 
 };
@@ -145,6 +147,38 @@ function locationizer(work_obj) {
 console.log(locationizer(work));
 
 $("#main").append(internationalizeButton);
+
+
+projects.display = function() {
+	projects.projects.forEach(function(project) {
+		$("#projects").append(HTMLprojectStart);
+
+		var formattedTitle = HTMLprojectTitle.replace
+		("%data%", project.title);
+		$(".project-entry:last").append(formattedTitle);
+
+		var formattedDate= HTMLprojectDates.replace
+		("%data%", project.dates);
+		$(".project-entry:last").append(formattedDate);
+
+		var formattedDescription = HTMLprojectDescription.replace
+		("%data%", project.description);
+		$(".project-entry:last").append(formattedDescription);
+
+		project.images.forEach(function(image) {
+			var formattedImages = HTMLprojectImage.replace
+			("%data%", image);
+			$(".project-entry:last").append(formattedImages);
+		});
+
+		var formattedVideo = HTMLprojectVideo.replace
+		("%data%", project.video);
+		$(".project-entry:last").append(formattedVideo);
+		
+	});
+}
+
+projects.display();
 
 
 
