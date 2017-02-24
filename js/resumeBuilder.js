@@ -149,7 +149,38 @@ function displayWork(work) {
 		("%data%", job.description);
 		$(".work-entry:last").append(formattedDescription);
 	} );
+ }
 }
+
+displayEducation(education);
+
+function displayEducation(education) {
+	if(education.School.length > 0) {
+
+
+	education.schools.forEach(function(school) {
+		$("#education").append(HTMLschoolStart);
+		var formattedName = HTMLschoolName.replace
+		("%data%", school.name);
+		$(".education-entry:last").append(formattedName);		
+
+		var formattedDegree = HTMLschoolDegree.replace
+		("%data%", school.degree);
+		$(".education-entry:last").append(formattedDegree);		
+
+		var formattedDates = HTMLschoolDates.replace
+		("%data%", school.dates);
+		$(".education-entry:last").append(formattedDates);
+
+		var formattedLocation = HTMLschoolLocation.replace
+		("%data%", school.location);
+		$(".education-entry:last").append(formattedLocation);
+
+		var formattedMajor = HTMLschoolMajor.replace
+		("%data%", school.major);
+		$(".education-entry:last").append(formattedMajor);
+	} );
+ }
 }
 
 $(document).click(function(loc) {
