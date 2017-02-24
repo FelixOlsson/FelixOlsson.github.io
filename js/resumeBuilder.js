@@ -93,6 +93,7 @@ var projects = {
 };
 
 $("#header").append(HTMLheaderName.replace("%data%", bio.name));
+$("#header").append(HTMLbioPic.replace("%data%", bio.bioPic));
 
 if(bio.skills.length > 0) {
 	$("#header").append(HTMLskillsStart);
