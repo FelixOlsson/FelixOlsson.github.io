@@ -155,7 +155,7 @@ function displayWork(work) {
 displayEducation(education);
 
 function displayEducation(education) {
-	if(education.school.length > 0) {
+	if(education.schools.length > 0) {
 
 
 	education.schools.forEach(function(school) {
