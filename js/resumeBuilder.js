@@ -21,10 +21,10 @@ var bio = {
 var education = {
 	"schools" : [
 	{
-		"name" : "Berga",
-		"location" : "Malmö",
-		"major" : ["grundskola"],
-		"dates" : 2005,
+		"name" : "Faculty of Engineering",
+		"location" : "Lund University",
+		"major" : ["master in computer science"],
+		"dates" : 2012 + " - ",
 		"url" : " "
 	},
 	{
