@@ -53,11 +53,34 @@ var work = {
 		"location" : "Lund",
 		"dates" : "2009-01-03 2010-01-03",
 		"description" : "delade ut tidningar"
+	},
+	{
+		"employer" : "tidningsbärarna",
+		"title" : "tidningsbud",
+		"location" : "Lund",
+		"dates" : "2009-01-03 2010-01-03",
+		"description" : "delade ut tidningar"
 	}]
 };
 
 var projects = {
 	"projects" : [
+	{
+		"title" : "android app",
+		"dates" : 2017,
+		"description" : "small game",
+		"images" : [],
+		"video" : "videos/gameplayMobileGame.mp4",
+		"repo" : "url"
+	},
+	{
+		"title" : "android app",
+		"dates" : 2017,
+		"description" : "small game",
+		"images" : [],
+		"video" : "videos/gameplayMobileGame.mp4",
+		"repo" : "url"
+	},
 	{
 		"title" : "android app",
 		"dates" : 2017,
