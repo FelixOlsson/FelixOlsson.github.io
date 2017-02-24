@@ -14,7 +14,7 @@ var bio = {
 	},
 	"bioPic" : "images/fry.jpg",
 	"welcome message" : "Välkommen till min sida",
-	"skills" : ["java", "c++", "c#", "sql", "javascript", "opengl"] 
+	"skills" : ["java", "c++", "c#", "sql", "javascript", "opengl", "göra", "sak", "latex", "hej"] 
 };
 
 
