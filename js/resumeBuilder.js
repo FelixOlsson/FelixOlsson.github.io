@@ -4,17 +4,17 @@ This is empty on purpose! Your code to build the resume will go here.
 
 var bio = {
 	"name" : "Felix Olsson",
-	"role" : "Software developer",
+	"role" : "Student",
 	"age" : "27",
 	"contacts" : {
 		"mobile" : "0730-31 58 04",
-		"email" : "dat12fol@student.lu.se",
-		"github" : "dat12fol",
+		"email" : "felix.martin.olsson@gmail.com",
+		"github" : "FelixOlsson",
 		"location" : "Lund"
 	},
 	"bioPic" : "images/fry.jpg",
-	"welcome message" : "Välkommen till min sida",
-	"skills" : ["java", "c++", "c#", "sql", "javascript", "opengl", "göra", "sak", "latex", "hej"] 
+	"welcome message" : "Welcome",
+	"skills" : ["java", "c++", "c#", "sql", "javascript", "latex"] 
 };
 
 
@@ -94,6 +94,8 @@ var projects = {
 
 $("#header").append(HTMLheaderName.replace("%data%", bio.name));
 $("#header").append(HTMLbioPic.replace("%data%", bio.bioPic));
+$("#header").append(HTMLheaderRole.replace("%data%", bio.role));
+
 
 if(bio.skills.length > 0) {
 	$("#header").append(HTMLskillsStart);
@@ -157,7 +159,7 @@ $(document).click(function(loc) {
  logClicks(x, y);
 });
 
-function locationizer(work_obj) {
+/*function locationizer(work_obj) {
 	var locationArray = [];
 
 	work_obj.jobs.forEach(function(job) {
@@ -171,7 +173,7 @@ function locationizer(work_obj) {
 console.log(locationizer(work));
 
 $("#main").append(internationalizeButton);
-
+*/
 
 projects.display = function() {
 	projects.projects.forEach(function(project) {
