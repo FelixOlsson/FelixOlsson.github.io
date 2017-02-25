@@ -88,7 +88,6 @@ p {
 a {
   color: #1199c3;
   text-decoration: none;
-  margin-top: 10px;
   display: block;
 }
 
@@ -225,10 +224,11 @@ div.tab {
     overflow: hidden;
     border: 1px solid #f5ae23;
     background-color: #f1f1f1;
+    padding: 14px 16px;
 }
 
 /* Style the links inside the tab */
-div.tab a {
+.tablinks {
     float: left;
     display: block;
     color: black;
@@ -240,12 +240,13 @@ div.tab a {
 }
 
 /* Change background color of links on hover */
-div.tab a:hover {
-    background-color: #484848;
+.tablinks:hover {
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* Create an active/current tablink class */
-div.tab a:focus, .active {
+.tablinks:focus, .active {
     background-color: #ccc;
 }
 

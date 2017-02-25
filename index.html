@@ -48,24 +48,24 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       <ul id="topContacts" class="flex-box"></ul>
     </div>
     <div class="tab">
-      <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'London')">Education</a>
-      <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Paris')">WorkExperience</a>
-      <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Tokyo')">Projects</a>
+      <a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'education-tab')" id="defaultOpen">Education</a>
+      <a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'workExperience-tab')">WorkExperience</a>
+      <a href="javascript:void(0)" class="tablinks" onclick="openTab(event, 'projects-tab')">Projects</a>
     </div>
 
-    <div id="London" class="tabcontent">
+    <div id="education-tab" class="tabcontent">
       <div id="education" class="gray">
         <h2>Education</h2>
       </div>
     </div>
 
-    <div id="Paris" class="tabcontent">
+    <div id="workExperience-tab" class="tabcontent">
       <div id="workExperience" class="gray">
         <h2>Work Experience</h2>
       </div>
     </div>
 
-    <div id="Tokyo" class="tabcontent">
+    <div id="projects-tab" class="tabcontent">
        <div id="projects">
       <h2>Projects</h2>
     </div>
@@ -106,6 +106,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
   <!-- More on helper.js in the class -->
   <script src="js/helper.js"></script>
+
 
   <!--
   The next line tells the browser where to download the JavaScript file you'll be
