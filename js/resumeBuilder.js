@@ -14,8 +14,31 @@ var bio = {
 	},
 	"bioPic" : "images/fry.jpg",
 	"welcome message" : "Welcome",
-	"skills" : ["java", "c++", "c#", "sql", "javascript", "latex"] 
+	"skills" : ["Java", "C++", "C#", "Sql", "Javascript", "LaTeX"], 
+	"display" : function() {
+
+		
+		$("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
+		$("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
+
+		$("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+		$("#topContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
+		$("#topContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
+		$("#topContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
+
+		$("#header").append(HTMLbioPic.replace("%data%", bio.bioPic));
+				
+		if(bio.skills.length > 0) {
+			$("#header").append(HTMLskillsStart);
+
+			bio.skills.forEach(function(skill) {
+				$("#skills").append(HTMLskills.replace("%data%",skill));
+			}); 
+		}
+	}
 };
+
+bio.display();
 
 
 var education = {
@@ -92,18 +115,6 @@ var projects = {
 
 };
 
-$("#header").append(HTMLheaderName.replace("%data%", bio.name));
-$("#header").append(HTMLbioPic.replace("%data%", bio.bioPic));
-$("#header").append(HTMLheaderRole.replace("%data%", bio.role));
-
-
-if(bio.skills.length > 0) {
-	$("#header").append(HTMLskillsStart);
-
-	bio.skills.forEach(function(skill) {
-		$("#skills").append(HTMLskills.replace("%data%",skill));
-	}); 
-}
 
 if(work.jobs.length > 0) {
 		
@@ -238,4 +249,23 @@ projects.display = function() {
 projects.display();
 
 
+function openCity(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
 
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the link that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}

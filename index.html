@@ -19,7 +19,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <!-- This tells the browser how to read the document. -->
   <meta charset="utf-8">
   <!-- Updates page every 5 second, comment for final product. -->
-  <meta http-equiv="refresh" content="5" />
+  <meta http-equiv="refresh" content="15" />
   <!-- Tells the browser what the title of this page should be. -->
   <title>Resume</title>
 
@@ -47,16 +47,32 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     <div id="header" class="center-content clear-fix">
       <ul id="topContacts" class="flex-box"></ul>
     </div>
-    <div style="clear: both;"></div>
-    <div id="workExperience" class="gray">
-      <h2>Work Experience</h2>
+    <div class="tab">
+      <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'London')">Education</a>
+      <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Paris')">WorkExperience</a>
+      <a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Tokyo')">Projects</a>
     </div>
-    <div id="projects">
+
+    <div id="London" class="tabcontent">
+      <div id="education" class="gray">
+        <h2>Education</h2>
+      </div>
+    </div>
+
+    <div id="Paris" class="tabcontent">
+      <div id="workExperience" class="gray">
+        <h2>Work Experience</h2>
+      </div>
+    </div>
+
+    <div id="Tokyo" class="tabcontent">
+       <div id="projects">
       <h2>Projects</h2>
     </div>
-    <div id="education" class="gray">
-      <h2>Education</h2>
     </div>
+    <div style="clear: both;"></div>
+    
+   
     <div id="mapDiv">
       <h2>Where I've Lived and Worked</h2>
     </div>

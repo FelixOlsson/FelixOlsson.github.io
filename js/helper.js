@@ -41,7 +41,7 @@ var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<img src="%data%">';
-var HTMLprojectVideo = '<video width="320" height="240" controls><source src="%data%" type="video/mp4"></video>';
+var HTMLprojectVideo = '<video width="50%" height="50%" controls><source src="%data%" type="video/mp4"></video>';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
