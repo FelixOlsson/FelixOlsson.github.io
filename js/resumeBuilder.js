@@ -116,8 +116,33 @@ var work = {
 		"location" : "Lund",
 		"dates" : "2009-01-03 2010-01-03",
 		"description" : "delade ut tidningar"
-	}]
+	}
+  ],
+  "display" : function() {
+		if(work.jobs.length > 0) {		
+			work.jobs.forEach(function(job) {
+				$("#workExperience").append(HTMLworkStart);
+				var formattedEmployer = HTMLworkEmployer.replace
+				("%data%", job.employer);
+				var formattedTitle = HTMLworkTitle.replace
+				("%data%", job.title);
+
+				var formattedEmployerTitle = formattedEmployer + formattedTitle;
+				$(".work-entry:last").append(formattedEmployerTitle);
+
+				var formattedDates = HTMLworkDates.replace
+				("%data%", job.dates);
+				$(".work-entry:last").append(formattedDates);
+
+				var formattedDescription = HTMLworkDescription.replace
+				("%data%", job.description);
+				$(".work-entry:last").append(formattedDescription);
+			});
+		}
+	} 
 };
+
+work.display();
 
 var projects = {
 	"projects" : [
@@ -144,88 +169,9 @@ var projects = {
 		"images" : [],
 		"video" : "videos/gameplayMobileGame.mp4",
 		"repo" : "url"
-	}]
-
-};
-
-
-if(work.jobs.length > 0) {
-		
-	work.jobs.forEach(function(job) {
-		$("#workExperience").append(HTMLworkStart);
-		var formattedEmployer = HTMLworkEmployer.replace
-		("%data%", job.employer);
-		var formattedTitle = HTMLworkTitle.replace
-		("%data%", job.title);
-
-		var formattedEmployerTitle = formattedEmployer + formattedTitle;
-		$(".work-entry:last").append(formattedEmployerTitle);
-
-		var formattedDates = HTMLworkDates.replace
-		("%data%", job.dates);
-		$(".work-entry:last").append(formattedDates);
-
-		var formattedDescription = HTMLworkDescription.replace
-		("%data%", job.description);
-		$(".work-entry:last").append(formattedDescription);
-	} );
-}
-displayWork(work);
-
-function displayWork(work) {
-	if(work.jobs.length > 0) {
-		
-	work.jobs.forEach(function(job) {
-		$("#workExperience").append(HTMLworkStart);
-		var formattedEmployer = HTMLworkEmployer.replace
-		("%data%", job.employer);
-		var formattedTitle = HTMLworkTitle.replace
-		("%data%", job.title);
-
-		var formattedEmployerTitle = formattedEmployer + formattedTitle;
-		$(".work-entry:last").append(formattedEmployerTitle);
-
-		var formattedDates = HTMLworkDates.replace
-		("%data%", job.dates);
-		$(".work-entry:last").append(formattedDates);
-
-		var formattedDescription = HTMLworkDescription.replace
-		("%data%", job.description);
-		$(".work-entry:last").append(formattedDescription);
-	} );
- }
-}
-
-/*displayEducation(education);
-
-function displayEducation(education) {
-	
-}*/
-
-$(document).click(function(loc) {
- var x = loc.pageX;
- var y = loc.pageY;
-
- logClicks(x, y);
-});
-
-/*function locationizer(work_obj) {
-	var locationArray = [];
-
-	work_obj.jobs.forEach(function(job) {
-		var newLocation = job.location;
-		locationArray.push(newLocation);
-	} );
-
-	return locationArray;
-}
-
-console.log(locationizer(work));
-
-$("#main").append(internationalizeButton);
-*/
-
-projects.display = function() {
+	}
+  ],
+  "display" : function() {
 	projects.projects.forEach(function(project) {
 		$("#projects").append(HTMLprojectStart);
 
@@ -249,12 +195,25 @@ projects.display = function() {
 
 		var formattedVideo = HTMLprojectVideo.replace
 		("%data%", project.video);
-		$(".project-entry:last").append(formattedVideo);
-		
+		$(".project-entry:last").append(formattedVideo);		
 	});
-}
+ }
+};
 
 projects.display();
+
+
+
+
+
+$(document).click(function(loc) {
+ var x = loc.pageX;
+ var y = loc.pageY;
+
+ logClicks(x, y);
+});
+
+
 
 
 
