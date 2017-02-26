@@ -20,7 +20,7 @@ var bio = {
 		
 		$("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
 		$("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
-
+	
 		$("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
 		$("#topContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
 		$("#topContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
@@ -47,7 +47,8 @@ var education = {
 		"name" : "Faculty of Engineering",
 		"location" : "Lund University",
 		"major" : ["master in computer science"],
-		"dates" : 2012 + " - ",
+		"dates" : 2012,
+		"degree" : ["Samhäll"],
 		"url" : " "
 	},
 	{
@@ -65,8 +66,40 @@ var education = {
 		"dates" : 2017,
 		"url" : " "
 	}
-  ]
-};
+  ],
+  "display" : function() {
+	  if(education.schools.length > 0) {
+
+		education.schools.forEach(function(school) {
+			$("#education").append(HTMLschoolStart);
+		
+			var formattedName = HTMLschoolName.replace
+			("%data%", school.name);
+			$(".education-entry:last").append(formattedName);		
+
+			var formattedDegree = HTMLschoolDegree.replace
+			("%data%", school.degree);
+			$(".education-entry:last").append(formattedDegree);		
+
+			var formattedDates = HTMLschoolDates.replace
+			("%data%", school.dates);
+			$(".education-entry:last").append(formattedDates);
+
+			var formattedLocation = HTMLschoolLocation.replace
+			("%data%", school.location);
+			$(".education-entry:last").append(formattedLocation);
+
+			if (typeof school.major != 'undefined') {
+				var formattedMajor = HTMLschoolMajor.replace
+				("%data%", school.major);
+				$(".education-entry:last").append(formattedMajor);
+			}		
+		});
+	  }
+	}
+ };
+
+education.display();
 
 var work = {
 	"jobs" : [
@@ -163,36 +196,11 @@ function displayWork(work) {
  }
 }
 
-displayEducation(education);
+/*displayEducation(education);
 
 function displayEducation(education) {
-	if(education.schools.length > 0) {
-
-
-	education.schools.forEach(function(school) {
-		$("#education").append(HTMLschoolStart);
-		var formattedName = HTMLschoolName.replace
-		("%data%", school.name);
-		$(".education-entry:last").append(formattedName);		
-
-		var formattedDegree = HTMLschoolDegree.replace
-		("%data%", school.degree);
-		$(".education-entry:last").append(formattedDegree);		
-
-		var formattedDates = HTMLschoolDates.replace
-		("%data%", school.dates);
-		$(".education-entry:last").append(formattedDates);
-
-		var formattedLocation = HTMLschoolLocation.replace
-		("%data%", school.location);
-		$(".education-entry:last").append(formattedLocation);
-
-		var formattedMajor = HTMLschoolMajor.replace
-		("%data%", school.major);
-		$(".education-entry:last").append(formattedMajor);
-	} );
- }
-}
+	
+}*/
 
 $(document).click(function(loc) {
  var x = loc.pageX;
@@ -254,7 +262,7 @@ projects.display();
 document.getElementById("defaultOpen").click();
 
 
-function openTab(evt, cityName) {
+function openTab(evt, tabName) {
     // Declare all variables
     var i, tabcontent, tablinks;
 
@@ -271,6 +279,6 @@ function openTab(evt, cityName) {
     }
 
     // Show the current tab, and add an "active" class to the link that opened the tab
-    document.getElementById(cityName).style.display = "block";
+    document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
 }
