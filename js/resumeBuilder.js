@@ -203,7 +203,7 @@ var projects = {
 projects.display();
 
 
-var intoduction = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci risus, viverra non libero eget, facilisis condimentum diam. Nam tincidunt rutrum diam, eget ultricies est pharetra sit amet. In aliquam feugiat mollis. Pellentesque maximus nec sapien a dictum. Cras lacinia hendrerit erat bibendum porta. Duis pharetra posuere enim, id aliquet nisl mollis sit amet. Proin urna nisl, dapibus elementum elementum a, varius quis metus. Nullam tincidunt, arcu ac rhoncus tincidunt, urna mi sagittis massa, fringilla sodales justo quam et eros. Maecenas dignissim massa felis, quis hendrerit diam luctus et. Nullam pretium risus sit amet lacus ornare porta. Duis sollicitudin mattis arcu, et lobortis leo. Aliquam eu nibh quis nibh feugiat bibendum sed quis metus. "
+var intoduction = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci risus, viverra non libero eget, facilisis condimentum diam. Nam tincidunt rutrum diam, eget ultricies est pharetra sit amet. In aliquam feugiat mollis. Pellentesque maximus nec sapien a dictum. Cras lacinia hendrerit erat bibendum porta. Duis pharetra posuere enim, id aliquet nisl mollis sit amet. Proin urna nisl, dapibus elementum elementum a, varius quis metus. Nullam tincidunt, arcu ac rhoncus tincidunt, urna mi sagittis massa, fringilla sodales justo quam et eros. Maecenas dignissim massa felis, quis hendrerit diam luctus et. Nullam pretium risus sit amet lacus ornare porta. Duis sollicitudin mattis arcu, et lobortis leo. Aliquam eu nibh quis nibh feugiat bibendum sed quis metus. ";
 
 
 
