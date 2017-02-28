@@ -9,7 +9,7 @@ var bio = {
 		"github" : "FelixOlsson",
 		"location" : "Lund"
 	},
-	"bioPic" : "images/fry.jpg",
+	"bioPic" : "images/profilbild.png",
 	"welcome message" : "Welcome",
 	"skills" : ["Java", "C++", "C#", "Sql", "Javascript", "LaTeX"], 
 	"display" : function() {
@@ -20,7 +20,9 @@ var bio = {
 	
 		$("#topContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
 		$("#topContacts").append(HTMLemail.replace("%data%", bio.contacts.email));
-		$("#topContacts").append(HTMLgithub.replace("%data%", bio.contacts.github));
+		var formatedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+		$("#topContacts").append(formatedGithub);
+
 		$("#topContacts").append(HTMLlocation.replace("%data%", bio.contacts.location));
 
 		$("#header").append(HTMLbioPic.replace("%data%", bio.bioPic));
@@ -200,7 +202,10 @@ var projects = {
 projects.display();
 
 
-var intoduction = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci risus, viverra non libero eget, facilisis condimentum diam. Nam tincidunt rutrum diam, eget ultricies est pharetra sit amet. In aliquam feugiat mollis. Pellentesque maximus nec sapien a dictum. Cras lacinia hendrerit erat bibendum porta. Duis pharetra posuere enim, id aliquet nisl mollis sit amet. Proin urna nisl, dapibus elementum elementum a, varius quis metus. Nullam tincidunt, arcu ac rhoncus tincidunt, urna mi sagittis massa, fringilla sodales justo quam et eros. Maecenas dignissim massa felis, quis hendrerit diam luctus et. Nullam pretium risus sit amet lacus ornare porta. Duis sollicitudin mattis arcu, et lobortis leo. Aliquam eu nibh quis nibh feugiat bibendum sed quis metus. ";
+var intoduction = "This is my first attempt at making a website, which is supposed to present my Curriculum vitae in a more pleasant and fun way. \n\n" +
+"The skeleton is from the course JavaScript basics from Udacity. \n <br>" +
+"<h3>Introduction</h3>"+
+"My name is hafkjhasfkjhskjhfkjsh" ;
 
 
 
