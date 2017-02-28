@@ -202,10 +202,8 @@ var projects = {
 projects.display();
 
 
-var intoduction = "This is my first attempt at making a website, which is supposed to present my Curriculum vitae in a more pleasant and fun way. \n\n" +
-"The skeleton is from the course JavaScript basics from Udacity. \n <br>" +
-"<h3>Introduction</h3>"+
-"My name is hafkjhasfkjhskjhfkjsh" ;
+var intoduction = "This is my first attempt at making a website, which is supposed to present my Curriculum vitae in a pleasant and fun way. \n\n" +
+"The skeleton is from the course JavaScript basics from Udacity. \n <br>";
 
 
 
